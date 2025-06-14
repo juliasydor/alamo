@@ -1,0 +1,89 @@
+{
+  "routines": [
+    {
+      "id": "routine-1",
+      "time": "08:00",
+      "name": "Morning Preparation",
+      "details": [
+        "Solution A – 5 mL",
+        "Compound B or C – 250 mg",
+        "Note: Mix in sterile container"
+      ],
+      "nutrients": {
+        "CHO": "26g",
+        "PTN": "25g",
+        "LIP": "1.3g"
+      },
+      "unit": "215 mAU",
+      "category": "morning"
+    },
+    {
+      "id": "routine-2",
+      "time": "10:30",
+      "name": "Mid-Morning Protocol",
+      "details": [
+        "Buffer Solution – 10 mL",
+        "Catalyst X – 100 mg",
+        "Note: Maintain temperature at 25°C"
+      ],
+      "nutrients": {
+        "CHO": "18g",
+        "PTN": "30g",
+        "LIP": "2.1g"
+      },
+      "unit": "180 mAU",
+      "category": "morning"
+    },
+    {
+      "id": "routine-3",
+      "time": "14:00",
+      "name": "Afternoon Analysis",
+      "details": [
+        "Reagent Mix – 7.5 mL",
+        "Stabilizer Y – 150 mg",
+        "Note: Allow 15 min settling time"
+      ],
+      "nutrients": {
+        "CHO": "22g",
+        "PTN": "28g",
+        "LIP": "1.8g"
+      },
+      "unit": "195 mAU",
+      "category": "afternoon"
+    },
+    {
+      "id": "routine-4",
+      "time": "16:45",
+      "name": "Late Afternoon Check",
+      "details": [
+        "Control Solution – 3 mL",
+        "Indicator Z – 75 mg",
+        "Note: Record all measurements"
+      ],
+      "nutrients": {
+        "CHO": "15g",
+        "PTN": "20g",
+        "LIP": "0.9g"
+      },
+      "unit": "160 mAU",
+      "category": "afternoon"
+    },
+    {
+      "id": "routine-5",
+      "time": "19:30",
+      "name": "Evening Cleanup",
+      "details": [
+        "Cleaning Agent – 12 mL",
+        "Neutralizer – 200 mg",
+        "Note: Dispose waste properly"
+      ],
+      "nutrients": {
+        "CHO": "8g",
+        "PTN": "12g",
+        "LIP": "0.5g"
+      },
+      "unit": "120 mAU",
+      "category": "evening"
+    }
+  ]
+}
