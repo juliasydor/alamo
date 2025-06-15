@@ -1,12 +1,36 @@
 "use client";
 
-import type React from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { useState } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+interface SearchContextType {
+  searchTerm: string;
+  setSearchTerm: (term: string) => void;
+}
+
+const SearchContext = createContext<SearchContextType | undefined>(undefined);
+
+export function useSearch() {
+  const context = useContext(SearchContext);
+  if (context === undefined) {
+    throw new Error("useSearch must be used within a SearchProvider");
+  }
+  return context;
+}
+
+function SearchProvider({ children }: { children: ReactNode }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+    <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
+      {children}
+    </SearchContext.Provider>
+  );
+}
+
+export function Providers({ children }: { children: ReactNode }) {
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -25,9 +49,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <QueryClientProvider client={queryClient}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <SearchProvider>
+      <QueryClientProvider client={queryClient}>
+        {children}
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </SearchProvider>
   );
 }

@@ -18,7 +18,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-query": "^5.17.0",
-    "@tanstack/react-query-devtools": "^5.17.0",
+    "@tanstack/react-query-devtools": "^5.80.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.303.0",
@@ -26,9 +26,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.48.2",
+    "root": "github:tanstack/react-query",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "zustand": "^4.4.7"
+    "zustand": "^4.5.7"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
